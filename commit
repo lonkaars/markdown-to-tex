@@ -12,7 +12,9 @@ git commit -m "auto generated commit by github actions"
 git status
 cat .git/HEAD
 
+git fetch master
 git checkout master
+git pull
 git merge markdown
 
 git push -u origin master
