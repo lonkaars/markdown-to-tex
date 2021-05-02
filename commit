@@ -10,12 +10,9 @@ git config pull.rebase false
 git add -A
 git commit -m "auto generated commit by github actions"
 
-git status
-cat .git/HEAD
-
 git fetch
 git checkout master
 git pull
-git merge markdown
+git merge markdown --allow-unrelated-histories
 
 git push -u origin master
