@@ -5,6 +5,7 @@ export GIT_DIR=${GIT_WORK_TREE}/.git
 
 git config user.name "GitHub Actions Bot"
 git config user.email "<>"
+git config pull.ff only
 
 git add -A
 git commit -m "auto generated commit by github actions"
@@ -12,7 +13,7 @@ git commit -m "auto generated commit by github actions"
 git status
 cat .git/HEAD
 
-git fetch master
+git fetch $(git remote get-url origin) master
 git checkout master
 git pull
 git merge markdown
