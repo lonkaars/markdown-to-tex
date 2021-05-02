@@ -1,0 +1,18 @@
+name: Compile markdown to latex pdf
+
+on:
+  push:
+    branches: [ markdown ]
+
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+    steps:
+    - uses: actions/checkout@v2
+    - name: apt-get update
+      run: sudo apt-get update
+    - name: latex packages
+      run: sudo apt-get latexmk pandoc
+    - name: build document
+      run: ./build document.md
+
