@@ -13,7 +13,7 @@ git commit -m "auto generated commit by github actions"
 git status
 cat .git/HEAD
 
-git fetch $(git remote get-url origin) master
+git fetch
 git checkout master
 git pull
 git merge markdown
