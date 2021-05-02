@@ -5,7 +5,7 @@ export GIT_DIR=${GIT_WORK_TREE}/.git
 
 git config user.name "GitHub Actions Bot"
 git config user.email "<>"
-git config pull.ff only
+git config pull.rebase false
 
 git add -A
 git commit -m "auto generated commit by github actions"
