@@ -12,7 +12,7 @@ jobs:
     - name: apt-get update
       run: sudo apt-get update
     - name: latex packages
-      run: sudo apt-get install latexmk texlive-xetex pandoc tex-gyre
+      run: sudo apt-get install latexmk texlive-xetex pandoc tex-gyre nodejs
     - name: build document
       run: ./build document.md
     - name: commit changes
