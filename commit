@@ -8,4 +8,11 @@ git config user.email "<>"
 
 git add -A
 git commit -m "auto generated commit by github actions"
-git push origin master
+
+git status
+cat .git/HEAD
+
+git checkout master
+git merge markdown
+
+git push -u origin master
