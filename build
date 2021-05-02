@@ -8,6 +8,8 @@ node cleanup.js
 echo "============ DEBUG DOCUMENT ============"
 cat document.md
 echo "============ DEBUG DOCUMENT ============"
+cat document.tex
+echo "============ DEBUG DOCUMENT ============"
 
 latexmk -r latexmkrc -pdfxe document.tex
 
