@@ -3,7 +3,7 @@ var fs = require("fs");
 var file = fs.readFileSync("./document.tex").toString();
 
 // remove \hypertarget that pandoc adds
-file = file.replace(/\\hypertarget{.*}{%\n\\section{(.*)}\\label{.*}}/g, "\\section{$1}");
+file = file.replace(/\\hypertarget{.*}{%\n\\((sub)*section){(.*)}\\label{.*}}/gs, "\\$1{$3}");
 
 // fix up \ldots with regular ...
 file = file.replace(/\\ldots{}/g, "...");
