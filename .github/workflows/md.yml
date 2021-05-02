@@ -12,7 +12,7 @@ jobs:
     - name: apt-get update
       run: sudo apt-get update
     - name: latex packages
-      run: sudo apt-get install latexmk pandoc
+      run: sudo apt-get install latexmk pandoc tex-gyre
     - name: build document
       run: ./build document.md
     - name: commit changes

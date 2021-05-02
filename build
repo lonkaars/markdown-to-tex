@@ -4,5 +4,5 @@ document=$1
 
 pandoc $document -o document.tex
 node cleanup.js
-latexmk document.tex
+latexmk document.tex -r latexmkrc
 
